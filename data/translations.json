@@ -1,20 +1,71 @@
 {
   "en": {
+    "site": {
+      "name": "Indian Social Welfare Association",
+      "description": "Indian Social Welfare Association is dedicated to education, healthcare, women empowerment and rural development across India."
+    },
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "gallery": "Gallery",
+      "events": "Events",
+      "contact": "Contact",
+      "donate": "Donate"
+    },
     "hero": "Empowering Communities, Transforming Lives",
     "donate": "Support Our Mission",
     "latest": "Latest Events",
     "upcoming": "Upcoming Events",
     "founderTitle": "Message from Our Founder",
     "founderMessage1": "Our vision is to create equal opportunities for every individual, regardless of their background.",
-    "founderMessage2": "Together, we can bring meaningful change and build a stronger Maharashtra."
+    "founderMessage2": "Together, we can bring meaningful change and build a stronger Maharashtra.",
+    "footer": {
+      "about_text": "Working towards education, healthcare and empowerment across India.",
+      "certified_title": "80G Certified NGO",
+      "certified_text": "Donations are eligible for tax exemption under Section 80G of the Income Tax Act.",
+      "address_title": "Address",
+      "address_line": "Indian Social Welfare Association, Narsi Namdeo, Hingoli, Maharashtra, India",
+      "email_label": "Email-id",
+      "phone_label": "Phone",
+      "whatsapp_label": "Whatsapp",
+      "rights": "All rights reserved.",
+      "powered_by": "Powered by ZP Global Systems"
+    },
+    "whatsapp_button": "WhatsApp"
   },
+
   "mr": {
+    "site": {
+      "name": "इंडियन सोशल वेल्फेअर असोसिएशन",
+      "description": "इंडियन सोशल वेल्फेअर असोसिएशन ही संस्था शिक्षण, आरोग्य, महिला सक्षमीकरण आणि ग्रामीण विकासासाठी कार्यरत आहे."
+    },
+    "navbar": {
+      "home": "मुख्यपृष्ठ",
+      "about": "आमच्याबद्दल",
+      "gallery": "गॅलरी",
+      "events": "कार्यक्रम",
+      "contact": "संपर्क",
+      "donate": "देणगी द्या"
+    },
     "hero": "समुदाय सशक्तीकरण, जीवन परिवर्तन",
     "donate": "आमच्या कार्याला समर्थन द्या",
     "latest": "नवीन कार्यक्रम",
     "upcoming": "आगामी कार्यक्रम",
     "founderTitle": "संस्थापकांचा संदेश",
     "founderMessage1": "प्रत्येक व्यक्तीला समान संधी मिळावी हे आमचे ध्येय आहे.",
-    "founderMessage2": "आपण सर्वजण मिळून महाराष्ट्र अधिक सक्षम बनवू शकतो."
+    "founderMessage2": "आपण सर्वजण मिळून महाराष्ट्र अधिक सक्षम बनवू शकतो.",
+    "footer": {
+      "about_text": "भारतभर शिक्षण, आरोग्य आणि सक्षमीकरणासाठी कार्यरत.",
+      "certified_title": "80G प्रमाणित संस्था",
+      "certified_text": "देणग्या आयकर कायद्याच्या कलम 80G अंतर्गत कर सवलतीस पात्र आहेत.",
+      "address_title": "पत्ता",
+      "address_line": "इंडियन सोशल वेल्फेअर असोसिएशन, नरसी नामदेव, हिंगोली, महाराष्ट्र, भारत",
+      "email_label": "ईमेल",
+      "phone_label": "फोन",
+      "whatsapp_label": "व्हॉट्सअ‍ॅप",
+      "rights": "सर्व हक्क राखीव.",
+      "powered_by": "ZP ग्लोबल सिस्टिम्स द्वारे समर्थित"
+    },
+    "whatsapp_button": "व्हॉट्सअ‍ॅप"
   }
 }

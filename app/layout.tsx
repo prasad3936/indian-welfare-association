@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import EngagementPopup from "@/components/EngagementPopup";
 import StickyDonate from "@/components/StickyDonate";
 
@@ -37,8 +39,18 @@ export default function RootLayout({
         {/* ================= NAVBAR ================= */}
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <Link href="/" className="text-xl font-bold text-green-700">
-              indian social welfare Association
+            {/* Logo Added */}
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="Indian social welfare Association Logo"
+                width={45}
+                height={45}
+                className="object-contain"
+              />
+              <span className="text-xl font-bold text-green-700">
+                indian social welfare Association
+              </span>
             </Link>
 
             <nav className="hidden md:flex items-center space-x-8">
@@ -78,6 +90,34 @@ export default function RootLayout({
               >
                 Donate
               </Link>
+
+              {/* Social Icons Added */}
+              <div className="flex items-center gap-4 ml-4">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-green-600 transition"
+                >
+                  <Facebook size={18} />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-green-600 transition"
+                >
+                  <Instagram size={18} />
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-green-600 transition"
+                >
+                  <Twitter size={18} />
+                </a>
+              </div>
             </nav>
           </div>
         </header>
@@ -99,13 +139,46 @@ export default function RootLayout({
         <footer className="bg-gray-900 text-white mt-0 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
             <div>
-              <h3 className="font-semibold text-lg text-white mb-4">
-                Indian social welfare Association
-              </h3>
+              {/* Logo Added in Footer */}
+              <div className="flex items-center gap-3 mb-4">
+                <Image src="/logo.png" alt="NGO Logo" width={40} height={40} />
+                <h3 className="font-semibold text-lg text-white">
+                  Indian social welfare Association
+                </h3>
+              </div>
+
               <p className="text-gray-300 leading-relaxed">
                 Working towards education, healthcare and empowerment across
                 India.
               </p>
+
+              {/* Social Icons Added in Footer */}
+              <div className="flex gap-4 mt-4">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition"
+                >
+                  <Facebook size={20} />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition"
+                >
+                  <Instagram size={20} />
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition"
+                >
+                  <Twitter size={20} />
+                </a>
+              </div>
             </div>
 
             <div>
@@ -119,21 +192,22 @@ export default function RootLayout({
             </div>
 
             <div>
-              <h3 className="font-semibold text-lg text-white mb-4">
-                Address
-              </h3>
+              <h3 className="font-semibold text-lg text-white mb-4">Address</h3>
               <p className="text-gray-300 leading-relaxed mb-2">
-                indian social welfare Association,Narsi Namdeo,Hingoli, Maharashtra, India
+                indian social welfare Association,Narsi Namdeo,Hingoli,
+                Maharashtra, India
               </p>
-              <p className="text-gray-300">Email-id: info@indianwelfareassociation.org</p>
+              <p className="text-gray-300">
+                Email-id: info@indianwelfareassociation.org
+              </p>
               <p className="text-gray-300">Phone: +9999999999</p>
               <p className="text-gray-300">Whatsapp: +918888888888</p>
             </div>
           </div>
 
           <div className="text-center py-6 border-t border-gray-200 text-gray-600">
-            © {new Date().getFullYear()} Indian Social Welfare Association. All rights
-            reserved.Powered by{"ZP Global Systems"}
+            © {new Date().getFullYear()} Indian Social Welfare Association. All
+            rights reserved.Powered by{"ZP Global Systems"}
           </div>
         </footer>
 
