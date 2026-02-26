@@ -3,11 +3,11 @@ export default function About() {
     <div className="bg-white min-h-screen">
       <div className="max-w-6xl mx-auto px-6 py-20">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-center">
-          About Indian Welfare Association
+          About indian social welfare Association
         </h1>
 
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          Indian Welfare Association is a registered NGO dedicated to improving
+          indian social welfare Association is a registered NGO dedicated to improving
           lives through education, healthcare, women empowerment, and rural
           development programs across India.
         </p>

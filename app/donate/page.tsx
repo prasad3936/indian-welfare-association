@@ -89,7 +89,7 @@ export default function DonatePage() {
             <div>
               <p className="text-gray-700 mb-2 font-semibold">Account Name</p>
               <div className="bg-white border border-gray-300 p-4 rounded-md text-gray-900 font-medium">
-                Indian Welfare Association
+                indian social welfare Association
               </div>
             </div>
 

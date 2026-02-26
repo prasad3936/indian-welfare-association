@@ -6,11 +6,11 @@ import StickyDonate from "@/components/StickyDonate";
 
 export const metadata: Metadata = {
   title: {
-    default: "Indian Welfare Association",
-    template: "%s | Indian Welfare Association",
+    default: "Indian social welfare Association",
+    template: "%s | Indian social welfare Association",
   },
   description:
-    "Indian Welfare Association is dedicated to education, healthcare, women empowerment and rural development across India.",
+    "Indian social welfare Association is dedicated to education, healthcare, women empowerment and rural development across India.",
   keywords: [
     "NGO in India",
     "Charity",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "80G NGO",
   ],
   openGraph: {
-    title: "Indian Welfare Association",
+    title: "indian social welfare Association",
     description:
       "Join us in building a better future through education and empowerment.",
     type: "website",
@@ -38,7 +38,7 @@ export default function RootLayout({
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <Link href="/" className="text-xl font-bold text-green-700">
-              Indian Welfare Association
+              indian social welfare Association
             </Link>
 
             <nav className="hidden md:flex items-center space-x-8">
@@ -100,7 +100,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
             <div>
               <h3 className="font-semibold text-lg text-white mb-4">
-                Indian Welfare Association
+                Indian social welfare Association
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 Working towards education, healthcare and empowerment across
@@ -123,7 +123,7 @@ export default function RootLayout({
                 Address
               </h3>
               <p className="text-gray-300 leading-relaxed mb-2">
-                Indian Welfare Association,Narsi Namdeo,Hingoli, Maharashtra, India
+                indian social welfare Association,Narsi Namdeo,Hingoli, Maharashtra, India
               </p>
               <p className="text-gray-300">Email-id: info@indianwelfareassociation.org</p>
               <p className="text-gray-300">Phone: +9999999999</p>
@@ -132,7 +132,7 @@ export default function RootLayout({
           </div>
 
           <div className="text-center py-6 border-t border-gray-200 text-gray-600">
-            © {new Date().getFullYear()} Indian Welfare Association. All rights
+            © {new Date().getFullYear()} Indian Social Welfare Association. All rights
             reserved.Powered by{"ZP Global Systems"}
           </div>
         </footer>
