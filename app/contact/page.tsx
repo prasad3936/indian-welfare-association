@@ -32,11 +32,10 @@ export default function ContactPage() {
             {/* Google Map Embed */}
             <div className="mt-10 rounded-xl overflow-hidden shadow-md border border-gray-200">
               <iframe
-                src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1816.1938243781167!2d77.02027243559705!3d19.754190923442916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd050a9a3bc3921%3A0xfbb244caae231a71!2sNarsi%20Namdev%2C%20Maharashtra%20431513!5e1!3m2!1sen!2sin!4v1772117417501!5m2!1sen!2sin"
                 width="100%"
-                height="250"
+                height="450"
                 loading="lazy"
-                className="border-0"
               ></iframe>
             </div>
           </div>
@@ -48,11 +47,10 @@ export default function ContactPage() {
             </h2>
 
             <form
-              action="https://formspree.io/f/YOUR_FORM_ID"
+              action="https://formspree.io/f/xgoldngb"
               method="POST"
               className="space-y-6"
             >
-              
               <input
                 type="text"
                 name="name"
