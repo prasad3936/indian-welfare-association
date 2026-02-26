@@ -1,0 +1,20 @@
+{
+  "en": {
+    "hero": "Empowering Communities, Transforming Lives",
+    "donate": "Support Our Mission",
+    "latest": "Latest Events",
+    "upcoming": "Upcoming Events",
+    "founderTitle": "Message from Our Founder",
+    "founderMessage1": "Our vision is to create equal opportunities for every individual, regardless of their background.",
+    "founderMessage2": "Together, we can bring meaningful change and build a stronger Maharashtra."
+  },
+  "mr": {
+    "hero": "समुदाय सशक्तीकरण, जीवन परिवर्तन",
+    "donate": "आमच्या कार्याला समर्थन द्या",
+    "latest": "नवीन कार्यक्रम",
+    "upcoming": "आगामी कार्यक्रम",
+    "founderTitle": "संस्थापकांचा संदेश",
+    "founderMessage1": "प्रत्येक व्यक्तीला समान संधी मिळावी हे आमचे ध्येय आहे.",
+    "founderMessage2": "आपण सर्वजण मिळून महाराष्ट्र अधिक सक्षम बनवू शकतो."
+  }
+}

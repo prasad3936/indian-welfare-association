@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "health-camp-2026",
+    "title": "Free Health Camp 2026",
+    "date": "January 2026",
+    "type": "latest",
+    "description": "Organized free medical checkups for rural families.",
+    "image": "/gallery/health.png"
+  },
+  {
+    "slug": "education-kit-distribution",
+    "title": "Education Kit Distribution",
+    "date": "December 2025",
+    "type": "latest",
+    "description": "Distributed study materials to underprivileged children.",
+    "image": "/gallery/edu.png"
+  },
+  {
+    "slug": "tree-plantation-drive",
+    "title": "Tree Plantation Drive",
+    "date": "March 2026",
+    "type": "upcoming",
+    "description": "Join us in planting trees for a greener India.",
+    "image": "/gallery/plantation.png"
+  }
+]
