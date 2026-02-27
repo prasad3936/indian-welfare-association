@@ -1,26 +1,38 @@
 [
   {
     "slug": "health-camp-2026",
-    "title": "Free Health Camp 2026",
-    "date": "January 2026",
-    "type": "latest",
-    "description": "Organized free medical checkups for rural families.",
-    "image": "/gallery/health.png"
+    "title": "Free Health Camp",
+    "date": "15 January 2026",
+    "venue": "Narsi Namdeo, Hingoli, Maharashtra",
+    "image": "/gallery/health.png",
+    "description": "Organized free medical checkups and distributed medicines to rural families.",
+    "type": "latest"
   },
   {
-    "slug": "education-kit-distribution",
-    "title": "Education Kit Distribution",
-    "date": "December 2025",
-    "type": "latest",
-    "description": "Distributed study materials to underprivileged children.",
-    "image": "/gallery/edu.png"
+    "slug": "education-support-2026",
+    "title": "Education Support Program",
+    "date": "20 February 2026",
+    "venue": "Hingoli District School, Maharashtra",
+    "image": "/gallery/edu.png",
+    "description": "Provided scholarships and study materials to underprivileged students.",
+    "type": "latest"
+  },
+  {
+    "slug": "women-empowerment-workshop-2026",
+    "title": "  Women Empowerment Workshop",
+    "date": "5 March 2026",
+    "venue": "Hingoli Community Center, Maharashtra",
+    "image": "/gallery/women.png",
+    "description": "Conducted workshops on skill development and financial literacy for women.",
+    "type": "latest"
   },
   {
     "slug": "tree-plantation-drive",
     "title": "Tree Plantation Drive",
-    "date": "March 2026",
-    "type": "upcoming",
-    "description": "Join us in planting trees for a greener India.",
-    "image": "/gallery/plantation.png"
+    "date": "10 March 2026",
+    "venue": "Hingoli District Ground, Maharashtra",
+    "image": "/gallery/plantation.png",
+    "description": "Join us in making Maharashtra greener by planting 1000+ trees.",
+    "type": "upcoming"
   }
 ]

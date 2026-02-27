@@ -20,27 +20,46 @@ export default async function EventDetail({
     return (
       <div className="bg-white min-h-screen">
         <div className="max-w-4xl mx-auto px-6 py-20 text-center">
-          <h1 className="text-2xl font-bold text-red-600">Event Not Found</h1>
+          <h1 className="text-2xl font-bold text-red-600">
+            Event Not Found
+          </h1>
         </div>
       </div>
     );
   }
 
   const shareUrl = `https://yourdomain.com/events/${event.slug}`;
-  const shareText = `Check out this event by Indian Welfare Association: ${event.title}`;
+  const shareText = `Check out this event by Indian Social Welfare Association: ${event.title}`;
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-6 py-20">
+      <div className="max-w-4xl mx-auto px-4 md:px-6 py-16 md:py-20">
         {/* Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           {event.title}
         </h1>
 
-        <p className="text-green-600 font-medium mb-6">{event.date}</p>
+        {/* Date + Venue */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6 text-lg">
+          <span className="text-green-600 font-medium">📅 {event.date}</span>
+          <span className="text-gray-700">📍 {event.venue}</span>
+        </div>
+
+        {/* Status Badge */}
+        {event.type === "upcoming" && (
+          <span className="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+            Upcoming Event
+          </span>
+        )}
+
+        {event.type === "latest" && (
+          <span className="inline-block bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold mb-6">
+            Completed Event
+          </span>
+        )}
 
         {/* Event Image */}
-        <div className="relative h-[450px] mb-10 rounded-xl overflow-hidden shadow-lg">
+        <div className="relative h-[300px] sm:h-[400px] md:h-[450px] mb-10 rounded-xl overflow-hidden shadow-lg">
           <Image
             src={event.image}
             alt={event.title}
@@ -92,6 +111,7 @@ export default async function EventDetail({
                 shareText + " " + shareUrl,
               )}`}
               target="_blank"
+              rel="noopener noreferrer"
               className="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition"
             >
               WhatsApp
@@ -103,17 +123,19 @@ export default async function EventDetail({
                 shareUrl,
               )}`}
               target="_blank"
+              rel="noopener noreferrer"
               className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
             >
               Facebook
             </a>
 
-            {/* Twitter / X */}
+            {/* X */}
             <a
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                 shareText,
               )}&url=${encodeURIComponent(shareUrl)}`}
               target="_blank"
+              rel="noopener noreferrer"
               className="bg-black text-white px-6 py-2 rounded-md hover:bg-gray-800 transition"
             >
               X

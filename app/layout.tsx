@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import translations from "@/data/translations.json";
-import { Facebook, Instagram, Twitter, Menu, X } from "lucide-react";
+import { Facebook, Instagram, Twitter, Menu, X, MessageCircle } from "lucide-react";
 import EngagementPopup from "@/components/EngagementPopup";
 import StickyDonate from "@/components/StickyDonate";
 
@@ -62,7 +62,7 @@ export default function RootLayout({
 
   return (
     <html lang={lang}>
-      <body className="bg-white text-gray-800 antialiased">
+      <body className="bg-white text-gray-800 antialiased min-h-screen flex flex-col">
         {/* ================= NAVBAR ================= */}
         <header
           className={`sticky top-0 z-50 transition-all duration-300 ${
@@ -167,42 +167,130 @@ export default function RootLayout({
         </header>
 
         {/* ================= CONTENT ================= */}
-        <main className="min-h-screen">{children}</main>
+        <main className="flex-1">{children}</main>
 
-        {/* ================= MOBILE DONATE BAR ================= */}
-        <div className="fixed bottom-0 left-0 right-0 md:hidden bg-green-600 text-white flex justify-center py-3 z-50">
+        {/* ================= MOBILE DONATE BAR ================= 
+        <div className="fixed bottom-20 md:bottom-6 right-6 md:hidden bg-green-600 text-white flex justify-center py-3 z-50">
           <Link href="/donate" className="font-semibold">
             {t.navbar.donate}
           </Link>
         </div>
-
+        {/* ================= STICKY WHATSAPP ================= */}
+        <a
+          href="https://wa.me/918888888888"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-24 right-6 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition z-[999] flex items-center justify-center"
+        >
+          <MessageCircle size={24} />
+        </a>
         {/* ================= FOOTER ================= */}
-        <footer className="bg-gray-900 text-white mt-16 pt-16 pb-10">
+        <footer className="bg-gray-900 text-white  pt-16">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            {/* NGO Info */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">{t.site.name}</h3>
-              <p className="text-gray-300 leading-relaxed">
-                {t.footer.about_text}
+              <h3 className="text-lg font-semibold mb-4">
+                Indian Social Welfare Association
+              </h3>
+
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Working towards education, healthcare and empowerment across
+                India.
+              </p>
+
+              {/* Contact Info */}
+              <p className="text-gray-300">
+                📧{" "}
+                <a
+                  href="mailto:info@indianwelfareassociation.org"
+                  className="hover:text-white transition"
+                >
+                  info@indianwelfareassociation.org
+                </a>
+              </p>
+
+              <p className="text-gray-300">
+                📞{" "}
+                <a
+                  href="tel:+919999999999"
+                  className="hover:text-white transition"
+                >
+                  +91 9999999999
+                </a>
+              </p>
+
+              <p className="text-gray-300 flex items-center gap-2">
+                <MessageCircle size={18} />
+                <a
+                  href="https://wa.me/918888888888"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                >
+                  +91 8888888888
+                </a>
+              </p>
+
+              {/* Social Links */}
+              <div className="flex gap-4 mt-6">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition"
+                >
+                  <Facebook size={20} />
+                </a>
+
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition"
+                >
+                  <Instagram size={20} />
+                </a>
+
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition"
+                >
+                  <Twitter size={20} />
+                </a>
+              </div>
+            </div>
+
+            {/* 80G Section */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">80G Certified NGO</h3>
+              <p className="text-gray-300">
+                Donations are eligible for tax exemption under Section 80G of
+                the Income Tax Act.
               </p>
             </div>
 
+            {/* Address */}
             <div>
-              <h3 className="text-lg font-semibold mb-4">
-                {t.footer.certified_title}
-              </h3>
-              <p className="text-gray-300">{t.footer.certified_text}</p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">
-                {t.footer.address_title}
-              </h3>
-              <p className="text-gray-300">{t.footer.address_line}</p>
+              <h3 className="text-lg font-semibold mb-4">Address</h3>
+              <p className="text-gray-300">
+                Indian Social Welfare Association,
+                <br />
+                Narsi Namdeo, Hingoli,
+                <br />
+                Maharashtra, India
+              </p>
             </div>
           </div>
 
-          <div className="text-center text-gray-400 text-sm mt-10">
-            © {new Date().getFullYear()} {t.site.name}. {t.footer.rights}
+          {/* Bottom Strip */}
+          <div className="text-center text-gray-400 text-sm border-t border-gray-700 py-4">
+            © {new Date().getFullYear()} Indian Social Welfare Association. All
+            rights reserved.
+            <br />
+            Powered by{" "}
+            <span className="text-gray-300 font-medium">ZP Global Systems</span>
           </div>
         </footer>
 
