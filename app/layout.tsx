@@ -167,7 +167,7 @@ export default function RootLayout({
         </header>
 
         {/* ================= CONTENT ================= */}
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 w-full">{children}</main>
 
         {/* ================= MOBILE DONATE BAR ================= 
         <div className="fixed bottom-20 md:bottom-6 right-6 md:hidden bg-green-600 text-white flex justify-center py-3 z-50">
@@ -185,7 +185,7 @@ export default function RootLayout({
           <MessageCircle size={24} />
         </a>
         {/* ================= FOOTER ================= */}
-        <footer className="bg-gray-900 text-white  pt-16">
+        <footer className="bg-gray-900 text-white pt-16 w-full">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
             {/* NGO Info */}
             <div>
