@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import TeamSection from "@/components/TeamSection";
 
 
 import "swiper/css";
@@ -143,6 +144,7 @@ export default function Home() {
             <p className="mt-6 font-semibold text-green-700">— Founder Name</p>
           </div>
         </div>
+        <TeamSection />
       </motion.section>
       {/* ================= CAROUSEL ================= */}
       <motion.section

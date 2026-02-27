@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Rahul Patil",
+    "role": "Founder & President",
+    "image": "/team/rahul.png",
+    "bio": "Working towards rural education and healthcare initiatives across Maharashtra."
+  },
+  {
+    "name": "Anita Deshmukh",
+    "role": "Vice President",
+    "image": "/team/anita.png",
+    "bio": "Leading women empowerment and skill development programs."
+  },
+  {
+    "name": "Suresh Kulkarni",
+    "role": "Treasurer",
+    "image": "/team/suresh.png",
+    "bio": "Overseeing financial transparency and donation management."
+  },
+  {
+    "name": "Priya Shinde",
+    "role": "Program Coordinator",
+    "image": "/team/priya.png",
+    "bio": "Managing community outreach and volunteer engagement."
+  }
+]
