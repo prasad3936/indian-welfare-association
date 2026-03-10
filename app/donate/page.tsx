@@ -135,7 +135,7 @@ export default function DonatePage() {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-green-600"
+                className="w-full border text-gray-700 rounded-md p-3 focus:ring-2 focus:ring-green-600"
               />
             </div>
 
@@ -151,7 +151,7 @@ export default function DonatePage() {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-green-600"
+                className="w-full border text-gray-700 rounded-md p-3 focus:ring-2 focus:ring-green-600"
               />
             </div>
 
@@ -167,7 +167,7 @@ export default function DonatePage() {
                 value={form.phone}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-green-600"
+                className="w-full border text-gray-700 rounded-md p-3 focus:ring-2 focus:ring-green-600"
               />
             </div>
 
@@ -183,7 +183,7 @@ export default function DonatePage() {
                 value={form.transaction}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-green-600"
+                className="w-full border text-gray-700 rounded-md p-3 focus:ring-2 focus:ring-green-600"
               />
             </div>
 
@@ -198,7 +198,7 @@ export default function DonatePage() {
                 accept="image/*"
                 onChange={handleFile}
                 required
-                className="w-full border border-gray-300 rounded-md p-3"
+                className="w-full border text-gray-700 rounded-md p-3"
               />
             </div>
 
