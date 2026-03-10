@@ -1,8 +1,8 @@
 [
   {
-    "name": "Rahul Patil",
-    "role": "Founder & President",
-    "image": "/team/rahul.png",
+    "name": "Ramesh Shinde",
+    "role": "President",
+    "image": "/team/President.jpeg",
     "bio": "Working towards rural education and healthcare initiatives across Maharashtra."
   },
   {
@@ -13,14 +13,14 @@
   },
   {
     "name": "Suresh Kulkarni",
-    "role": "Treasurer",
+    "role": "Secretary",
     "image": "/team/suresh.png",
     "bio": "Overseeing financial transparency and donation management."
   },
   {
-    "name": "Priya Shinde",
+    "name": "Prashant Jagtap",
     "role": "Program Coordinator",
-    "image": "/team/priya.png",
+    "image": "/team/Prashant.jpeg",
     "bio": "Managing community outreach and volunteer engagement."
   }
 ]

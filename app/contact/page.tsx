@@ -1,4 +1,60 @@
+"use client";
+
+import { useState } from "react";
+
 export default function ContactPage() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: any) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbyxp5rfPfwqlE7SWXksrRUHNDdNdDLkNCBg0cWW0DjzYwZKj-RnhpKLQlVOATGPocCF/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            type: "contact",
+            name: form.name,
+            email: form.email,
+            phone: form.phone,
+            message: form.message,
+          }),
+        },
+      );
+
+      alert("Message sent successfully!");
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      alert("Error sending message. Please try again.");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div className="bg-white min-h-screen">
       <div className="max-w-6xl mx-auto px-6 py-20">
@@ -46,16 +102,14 @@ export default function ContactPage() {
               Send Us a Message
             </h2>
 
-            <form
-              action="https://formspree.io/f/xgoldngb"
-              method="POST"
-              className="space-y-6"
-            >
+            <form onSubmit={handleSubmit} className="space-y-6">
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
                 required
+                value={form.name}
+                onChange={handleChange}
                 className="w-full border border-gray-300 p-3 rounded-md bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-green-500 outline-none"
               />
 
@@ -64,6 +118,8 @@ export default function ContactPage() {
                 name="email"
                 placeholder="Your Email"
                 required
+                value={form.email}
+                onChange={handleChange}
                 className="w-full border border-gray-300 p-3 rounded-md bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-green-500 outline-none"
               />
 
@@ -71,6 +127,8 @@ export default function ContactPage() {
                 type="text"
                 name="phone"
                 placeholder="Phone Number"
+                value={form.phone}
+                onChange={handleChange}
                 className="w-full border border-gray-300 p-3 rounded-md bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-green-500 outline-none"
               />
 
@@ -79,14 +137,17 @@ export default function ContactPage() {
                 rows={4}
                 placeholder="Your Message"
                 required
+                value={form.message}
+                onChange={handleChange}
                 className="w-full border border-gray-300 p-3 rounded-md bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-green-500 outline-none"
               />
 
               <button
                 type="submit"
+                disabled={loading}
                 className="w-full bg-green-600 text-white py-3 rounded-md font-semibold hover:bg-green-700 transition"
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>

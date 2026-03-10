@@ -1,7 +1,7 @@
 {
   "en": {
     "site": {
-      "name": "Indian Social Welfare Association",
+      "name": "Indian Social Welfare Mission Hingoli",
       "description": "Indian Social Welfare Association is dedicated to education, healthcare, women empowerment and rural development across India."
     },
     "navbar": {
@@ -10,7 +10,8 @@
       "gallery": "Gallery",
       "events": "Events",
       "contact": "Contact",
-      "donate": "Donate"
+      "donate": "Donate",
+      "volunteer": "Volunteer"
     },
     "hero": "Empowering Communities, Transforming Lives",
     "donate": "Support Our Mission",
@@ -36,7 +37,7 @@
 
   "mr": {
     "site": {
-      "name": "इंडियन सोशल वेल्फेअर असोसिएशन",
+      "name": "इंडियन सोशल वेल्फेअर मिशन हिंगोली",
       "description": "इंडियन सोशल वेल्फेअर असोसिएशन ही संस्था शिक्षण, आरोग्य, महिला सक्षमीकरण आणि ग्रामीण विकासासाठी कार्यरत आहे."
     },
     "navbar": {
@@ -45,7 +46,8 @@
       "gallery": "गॅलरी",
       "events": "कार्यक्रम",
       "contact": "संपर्क",
-      "donate": "देणगी द्या"
+      "donate": "देणगी द्या",
+      "volunteer": "भागीदार बना"
     },
     "hero": "समुदाय सशक्तीकरण, जीवन परिवर्तन",
     "donate": "आमच्या कार्याला समर्थन द्या",

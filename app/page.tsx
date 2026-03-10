@@ -141,7 +141,8 @@ export default function Home() {
               {t.founderMessage2}
             </p>
 
-            <p className="mt-6 font-semibold text-green-700">— Founder Name</p>
+            <p className="mt-6 font-semibold text-green-700">— Sunil Jagtap </p>
+            <p className="text-sm text-gray-500">Founder & Secretary</p>
           </div>
         </div>
         <TeamSection />

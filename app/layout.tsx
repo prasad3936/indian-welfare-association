@@ -69,13 +69,20 @@ export default function RootLayout({
             scrolled ? "bg-white shadow-md py-2" : "bg-white py-4"
           } border-b border-gray-200`}
         >
-          <div className="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
+          <div className="max-w-7xl mx-auto px-3 md:px-4 flex justify-between items-center">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo.png" alt="Logo" width={40} height={40} />
-              <span className="text-base md:text-xl font-bold text-green-700">
-                {t.site.name}
-              </span>
+            <Link href="/" className="flex items-center gap-4 pr-8">
+              <Image src="/logo.png" alt="Logo" width={100} height={100} />
+
+              <div className="flex flex-col leading-tight">
+                <span className="text-base md:text-xl font-bold text-green-700">
+                  {t.site.name}
+                </span>
+
+                <span className="text-xs text-gray-500">
+                  Regd. No: F-12345 / 2024
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Nav */}
@@ -85,6 +92,7 @@ export default function RootLayout({
               {navLink("/gallery", t.navbar.gallery)}
               {navLink("/events", t.navbar.events)}
               {navLink("/contact", t.navbar.contact)}
+              {navLink("/volunteer", t.navbar.volunteer)}
 
               <Link
                 href="/donate"
@@ -113,18 +121,32 @@ export default function RootLayout({
               </div>
 
               <div className="flex gap-4 ml-4 text-gray-700">
-                <Facebook
-                  size={18}
-                  className="hover:text-green-600 transition cursor-pointer"
-                />
-                <Instagram
-                  size={18}
-                  className="hover:text-green-600 transition cursor-pointer"
-                />
-                <Twitter
-                  size={18}
-                  className="hover:text-green-600 transition cursor-pointer"
-                />
+                <a
+                  href="https://facebook.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-600 transition"
+                >
+                  <Facebook size={18} className="cursor-pointer" />
+                </a>
+
+                <a
+                  href="https://instagram.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-600 transition"
+                >
+                  <Instagram size={18} className="cursor-pointer" />
+                </a>
+
+                <a
+                  href="https://twitter.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-600 transition"
+                >
+                  <Twitter size={18} className="cursor-pointer" />
+                </a>
               </div>
             </nav>
 
@@ -149,6 +171,7 @@ export default function RootLayout({
               {navLink("/gallery", t.navbar.gallery)}
               {navLink("/events", t.navbar.events)}
               {navLink("/contact", t.navbar.contact)}
+              {navLink("/volunteer", t.navbar.volunteer)}
 
               <Link
                 href="/donate"
@@ -190,7 +213,10 @@ export default function RootLayout({
             {/* NGO Info */}
             <div>
               <h3 className="text-lg font-semibold mb-4">
-                Indian Social Welfare Association
+                Indian Social Welfare Mission Hingoli
+                <p className="text-gray-300 text-sm mt-2">
+                  Regd. No: F-12345 / 2024{" "}
+                </p>
               </h3>
 
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -202,10 +228,10 @@ export default function RootLayout({
               <p className="text-gray-300">
                 📧{" "}
                 <a
-                  href="mailto:info@indianwelfareassociation.org"
+                  href="mailto:contact@indiansocialwelfare.com"
                   className="hover:text-white transition"
                 >
-                  info@indianwelfareassociation.org
+                  contact@indiansocialwelfare.com
                 </a>
               </p>
 

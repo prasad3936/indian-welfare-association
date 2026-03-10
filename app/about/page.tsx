@@ -7,7 +7,7 @@ export default function About() {
         </h1>
 
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          indian social welfare Association is a registered NGO dedicated to improving
+          Indian social welfare Association is a registered NGO dedicated to improving
           lives through education, healthcare, women empowerment, and rural
           development programs across India.
         </p>
