@@ -238,22 +238,22 @@ export default function RootLayout({
               <p className="text-gray-300">
                 📞{" "}
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+919665802090"
                   className="hover:text-white transition"
                 >
-                  +91 9999999999
+                  +91 9665802090
                 </a>
               </p>
 
               <p className="text-gray-300 flex items-center gap-2">
                 <MessageCircle size={18} />
                 <a
-                  href="https://wa.me/918888888888"
+                  href="https://wa.me/919665802090"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
                 >
-                  +91 8888888888
+                  +91 9665802090
                 </a>
               </p>
 
