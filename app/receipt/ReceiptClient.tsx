@@ -22,7 +22,11 @@ export default function ReceiptClient() {
     fetch(`${SCRIPT_URL}?action=getDonations`)
       .then((res) => res.json())
       .then((data) => {
-        const d = data.find((x: any) => x.receiptno === receiptNo);
+        // safer receipt lookup (header mismatch protection)
+        const d = data.find(
+          (x: any) =>
+            String(x.receiptno || x.ReceiptNo || x["Receipt No"]) === receiptNo,
+        );
 
         if (!d) {
           setStatus("Receipt not found");
@@ -57,76 +61,91 @@ export default function ReceiptClient() {
   };
 
   const generatePDF = async (d: any) => {
-    const logo = await loadImage("/logo.png");
-    const signature = await loadImage("/signature.jpeg");
+    try {
+      const logo = await loadImage(`${window.location.origin}/logo.png`);
+      const signature = await loadImage(
+        `${window.location.origin}/signature.jpeg`,
+      );
 
-    const doc = new jsPDF();
-    const pageWidth = doc.internal.pageSize.getWidth();
+      const doc = new jsPDF();
+      const pageWidth = doc.internal.pageSize.getWidth();
 
-    const formattedAmount = Number(d.amount || 0).toLocaleString("en-IN");
+      // clean amount from sheets
+      const amountNumber = Number(d.amount || 0);
+      const formattedAmount = amountNumber.toLocaleString("en-IN");
 
-    doc.addImage(logo, "PNG", 15, 10, 25, 25);
+      doc.addImage(logo, "PNG", 15, 10, 25, 25);
 
-    doc.setFontSize(18);
-    doc.text("Indian Social Welfare Association Hingoli", pageWidth / 2, 20, {
-      align: "center",
-    });
+      doc.setFontSize(18);
+      doc.text("Indian Social Welfare Association Hingoli", pageWidth / 2, 20, {
+        align: "center",
+      });
 
-    doc.setFontSize(11);
-    doc.text("Hingoli, Maharashtra", pageWidth / 2, 27, {
-      align: "center",
-    });
+      doc.setFontSize(11);
+      doc.text("Hingoli, Maharashtra", pageWidth / 2, 27, {
+        align: "center",
+      });
 
-    doc.setFontSize(16);
-    doc.text("DONATION RECEIPT", pageWidth / 2, 45, {
-      align: "center",
-    });
+      doc.setFontSize(16);
+      doc.text("DONATION RECEIPT", pageWidth / 2, 45, {
+        align: "center",
+      });
 
-    doc.rect(20, 55, pageWidth - 40, 80);
+      doc.setLineWidth(0.5);
+      doc.rect(20, 55, pageWidth - 40, 80);
 
-    let y = 70;
+      let y = 70;
 
-    doc.setFontSize(12);
+      doc.setFontSize(12);
 
-    const row = (label: string, value: string) => {
-      doc.text(label, 30, y);
-      doc.text(value, 100, y);
-      y += 10;
-    };
+      const row = (label: string, value: string) => {
+        doc.text(label, 30, y);
+        doc.text(value, 100, y);
+        y += 10;
+      };
 
-    row("Receipt No:", String(d.receiptno));
-    row("Donor Name:", String(d.name || "-"));
-    row("Phone:", String(d.phone || "-"));
-    row("Email:", String(d.email || "-"));
-    row("Donation Amount:", `₹ ${formattedAmount}`);
-    row("Transaction ID:", String(d.transaction || "-"));
-    row("Date:", new Date(d.date).toLocaleDateString("en-IN"));
+      row("Receipt No:", String(d.receiptno || "-"));
+      row("Donor Name:", String(d.name || "-"));
+      row("Phone:", String(d.phone || "-"));
+      row("Email:", String(d.email || "-"));
+      row("Donation Amount:", `Rs. ${formattedAmount}`);
+      row("Transaction ID:", String(d.transaction || "-"));
 
-    doc.setFontSize(11);
-    doc.text(
-      "This donation may be eligible for tax deduction under Section 80G.",
-      pageWidth / 2,
-      150,
-      { align: "center" },
-    );
+      const safeDate = d.date
+        ? new Date(d.date).toLocaleDateString("en-IN")
+        : "-";
 
-    doc.addImage(signature, "JPEG", pageWidth - 70, 220, 40, 20);
+      row("Date:", safeDate);
 
-    doc.setFontSize(10);
-    doc.text("Authorized Signatory", pageWidth - 50, 245, {
-      align: "center",
-    });
+      doc.setFontSize(11);
+      doc.text(
+        "This donation may be eligible for tax deduction under Section 80G.",
+        pageWidth / 2,
+        150,
+        { align: "center" },
+      );
 
-    doc.save(`Donation_Receipt_${d.receiptno}.pdf`);
+      doc.addImage(signature, "JPEG", pageWidth - 70, 220, 40, 20);
 
-    setTimeout(() => {
-      window.close();
-    }, 1500);
+      doc.setFontSize(10);
+      doc.text("Authorized Signatory", pageWidth - 50, 245, {
+        align: "center",
+      });
+
+      doc.save(`Donation_Receipt_${d.receiptno}.pdf`);
+
+      setTimeout(() => {
+        window.close();
+      }, 1500);
+    } catch (err) {
+      setStatus("Failed to generate receipt");
+    }
   };
 
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      {status}
-    </div>
-  );
+return (
+  <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-700">
+    <div className="animate-spin h-10 w-10 border-4 border-green-600 border-t-transparent rounded-full mb-4"></div>
+    <p className="text-lg">{status}</p>
+  </div>
+);
 }
