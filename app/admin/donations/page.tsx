@@ -76,7 +76,7 @@ export default function AdminDonations() {
     doc.addImage(logo, "PNG", 15, 10, 25, 25);
 
     doc.setFontSize(18);
-    doc.text("Indian Social Welfare Association Hingoli", pageWidth / 2, 20, {
+    doc.text("Indian Social Welfare Mission Hingoli Hingoli", pageWidth / 2, 20, {
       align: "center",
     });
 
@@ -149,7 +149,7 @@ const receiptLink = `${baseUrl}/receipt?no=${d.receiptno}`;
 
     const message = `Hello ${d.name},
 
-Thank you for supporting Indian Social Welfare Association.
+Thank you for supporting Indian Social Welfare Mission Hingoli.
 
 Receipt No: ${d.receiptno}
 Amount: ₹${d.amount}

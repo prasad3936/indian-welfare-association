@@ -38,17 +38,6 @@ export default function AdminDashboard() {
               Volunteers
             </Link>
 
-            <Link href="/admin/bank" className="border p-6 rounded shadow">
-              Bank Settings
-            </Link>
-
-            <Link href="/admin/gallery" className="border p-6 rounded shadow">
-              Gallery Manager
-            </Link>
-
-            <Link href="/admin/events" className="border p-6 rounded shadow">
-              Event Management
-            </Link>
           </div>
         </div>
       </div>
