@@ -120,7 +120,7 @@ export default function Home() {
           {/* Founder Image */}
           <div className="relative h-[450px] rounded-xl overflow-hidden shadow-xl">
             <Image
-              src="/founder.png"
+              src="/founder.jpeg"
               alt="Founder"
               fill
               className="object-cover"

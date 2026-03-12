@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import AdminGuard from "@/components/AdminGuard";
 
 const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwUMcS7792zKpkd3d4gb-LY8QLbj-ovMpVJ0hDcc_ULiCnQhcQP9Kus7IuoRsEaaiXt/exec";
+  "https://script.google.com/macros/s/AKfycbyKZ1BEMHWNT4TXfsgO5Qc6CoUz3W53peGrr99NG8LERUjolxuoga1rHcd6ygeihDAp/exec";
 
 export default function VolunteerManager() {
   const [volunteers, setVolunteers] = useState<any[]>([]);

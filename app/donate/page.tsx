@@ -46,7 +46,7 @@ export default function DonatePage() {
 
       try {
         await fetch(
-          "https://script.google.com/macros/s/AKfycbwUMcS7792zKpkd3d4gb-LY8QLbj-ovMpVJ0hDcc_ULiCnQhcQP9Kus7IuoRsEaaiXt/exec",
+          "https://script.google.com/macros/s/AKfycbyKZ1BEMHWNT4TXfsgO5Qc6CoUz3W53peGrr99NG8LERUjolxuoga1rHcd6ygeihDAp/exec",
           {
             method: "POST",
             mode: "no-cors",
@@ -220,7 +220,7 @@ export default function DonatePage() {
 
               <input
                 type="file"
-                accept="image/*"
+                accept="image/*,pdf"
                 onChange={handleFile}
                 required
                 className="w-full border text-gray-700 rounded-md p-3"

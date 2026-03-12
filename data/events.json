@@ -1,12 +1,12 @@
 [
   {
-    "title": "Prize Distribution",
-    "date": "15 March 2026",
+    "title": "Workshop on Robotics",
+    "date": "20 March 2026",
     "venue": "Aundha",
-    "description": "prize for thw 10th ",
-    "type": "latest",
-    "image": "/events/1773233492056-plantation.png",
-    "slug": "prize-distribution"
+    "description": "We are organizing a workshop for Primary school students to encourage them towards robotics.",
+    "type": "upcoming",
+    "image": "",
+    "slug": "workshop-on-robotics"
   },
   {
     "slug": "health-camp-2026",
@@ -34,15 +34,6 @@
     "image": "/gallery/women.png",
     "description": "Conducted workshops on skill development and financial literacy for women.",
     "type": "latest"
-  },
-  {
-    "slug": "women's-day",
-    "title": "Women's Day",
-    "date": "12 March 2026",
-    "venue": "Narsi Namdeo",
-    "description": "On the Occassion of Women's Day ",
-    "image": "",
-    "type": "upcoming"
   },
   {
     "slug": "tree-plantation",

@@ -36,14 +36,14 @@ export default function AdminLogin() {
         onSubmit={handleLogin}
         className="bg-white p-10 rounded-xl shadow-lg w-[400px]"
       >
-        <h1 className="text-2xl font-bold text-center mb-8">Admin Login</h1>
+        <h1 className="text-2xl font-bold text-green-400 text-center mb-8">Admin Login</h1>
 
         <input
           type="password"
           placeholder="Enter admin password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full border p-3 rounded mb-4"
+          className="w-full border text-gray-800 p-3 rounded mb-4"
         />
 
         {error && <p className="text-red-600 mb-4">{error}</p>}
