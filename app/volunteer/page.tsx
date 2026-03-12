@@ -26,7 +26,7 @@ export default function VolunteerPage() {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbyxp5rfPfwqlE7SWXksrRUHNDdNdDLkNCBg0cWW0DjzYwZKj-RnhpKLQlVOATGPocCF/exec",
+        "https://script.google.com/macros/s/AKfycbwUMcS7792zKpkd3d4gb-LY8QLbj-ovMpVJ0hDcc_ULiCnQhcQP9Kus7IuoRsEaaiXt/exec",
         {
           method: "POST",
           mode: "no-cors",

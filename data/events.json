@@ -1,5 +1,14 @@
 [
   {
+    "title": "Prize Distribution",
+    "date": "15 March 2026",
+    "venue": "Aundha",
+    "description": "prize for thw 10th ",
+    "type": "latest",
+    "image": "/events/1773233492056-plantation.png",
+    "slug": "prize-distribution"
+  },
+  {
     "slug": "health-camp-2026",
     "title": "Free Health Camp",
     "date": "15 January 2026",
@@ -27,12 +36,21 @@
     "type": "latest"
   },
   {
-    "slug": "tree-plantation-drive",
-    "title": "Tree Plantation Drive",
-    "date": "10 March 2026",
-    "venue": "Hingoli District Ground, Maharashtra",
-    "image": "/gallery/plantation.png",
-    "description": "Join us in making Maharashtra greener by planting 1000+ trees.",
+    "slug": "women's-day",
+    "title": "Women's Day",
+    "date": "12 March 2026",
+    "venue": "Narsi Namdeo",
+    "description": "On the Occassion of Women's Day ",
+    "image": "",
     "type": "upcoming"
+  },
+  {
+    "slug": "tree-plantation",
+    "title": "Tree Plantation",
+    "date": "10 March 2026",
+    "venue": "Narsi",
+    "description": "Planted 1000 trees of Nimb",
+    "image": "/gallery/plantation.png",
+    "type": "latest"
   }
 ]

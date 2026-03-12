@@ -23,7 +23,7 @@ export default function ContactPage() {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbyxp5rfPfwqlE7SWXksrRUHNDdNdDLkNCBg0cWW0DjzYwZKj-RnhpKLQlVOATGPocCF/exec",
+        "https://script.google.com/macros/s/AKfycbwUMcS7792zKpkd3d4gb-LY8QLbj-ovMpVJ0hDcc_ULiCnQhcQP9Kus7IuoRsEaaiXt/exec",
         {
           method: "POST",
           mode: "no-cors",
@@ -72,11 +72,12 @@ export default function ContactPage() {
 
             <div className="space-y-4 text-gray-700">
               <p>
-                <span className="font-semibold">Email:</span> info@iwa.org
+                <span className="font-semibold">Email:</span>{" "}
+                contact@indiansocialwelfare.com
               </p>
 
               <p>
-                <span className="font-semibold">Phone:</span> +91 9876543210
+                <span className="font-semibold">Phone:</span> +91 9665802090
               </p>
 
               <p>

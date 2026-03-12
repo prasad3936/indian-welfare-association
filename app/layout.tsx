@@ -72,7 +72,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-3 md:px-4 flex justify-between items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-4 pr-8">
-              <Image src="/logo.png" alt="Logo" width={100} height={100} />
+              <Image src="/image.png" alt="Logo" width={100} height={100} />
 
               <div className="flex flex-col leading-tight">
                 <span className="text-base md:text-xl font-bold text-green-700">
@@ -200,7 +200,7 @@ export default function RootLayout({
         </div>
         {/* ================= STICKY WHATSAPP ================= */}
         <a
-          href="https://wa.me/918888888888"
+          href="https://wa.me/919665802090"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-24 right-6 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition z-[999] flex items-center justify-center"
@@ -301,7 +301,7 @@ export default function RootLayout({
             <div>
               <h3 className="text-lg font-semibold mb-4">Address</h3>
               <p className="text-gray-300">
-                Indian Social Welfare Association,
+                Indian Social Welfare Mission,
                 <br />
                 Narsi Namdeo, Hingoli,
                 <br />
@@ -312,7 +312,7 @@ export default function RootLayout({
 
           {/* Bottom Strip */}
           <div className="text-center text-gray-400 text-sm border-t border-gray-700 py-4">
-            © {new Date().getFullYear()} Indian Social Welfare Association. All
+            © {new Date().getFullYear()} Indian Social Welfare Mission. All
             rights reserved.
             <br />
             Powered by{" "}
