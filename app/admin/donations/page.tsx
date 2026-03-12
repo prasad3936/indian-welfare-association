@@ -76,7 +76,7 @@ export default function AdminDonations() {
     doc.addImage(logo, "PNG", 15, 10, 25, 25);
 
     doc.setFontSize(18);
-    doc.text("Indian Social Welfare Mission Hingoli Hingoli", pageWidth / 2, 20, {
+    doc.text("Indian Social Welfare Mission  Hingoli", pageWidth / 2, 20, {
       align: "center",
     });
 
