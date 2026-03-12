@@ -24,15 +24,7 @@ export default function AdminDashboard() {
             </button>
           </div>
 
-          <div className="grid md:grid-cols-3  text-gray-700 gap-8">
-            <Link href="/admin/events" className="border p-6  rounded shadow">
-              Manage Events
-            </Link>
-
-            <Link href="/admin/gallery" className="border p-6 rounded shadow">
-              Manage Gallery
-            </Link>
-
+          <div className="grid md:grid-cols-3  text-gray-700 gap-8">            
             <Link href="/admin/donations" className="border p-6 rounded shadow">
               Donation Dashboard
             </Link>
