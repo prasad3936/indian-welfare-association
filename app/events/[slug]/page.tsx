@@ -60,8 +60,15 @@ export default async function EventDetail({
 
         {/* Event Image */}
         <div className="relative h-[300px] sm:h-[400px] md:h-[450px] mb-10 rounded-xl overflow-hidden shadow-lg">
+          import Image from "next/image";
           <Image
-            src={event.image}
+            src={
+              event.image
+                ? event.image
+                : event.type === "upcoming"
+                  ? "/events/coming-soon.jpg"
+                  : "/events/default.jpg"
+            }
             alt={event.title}
             fill
             className="object-cover"

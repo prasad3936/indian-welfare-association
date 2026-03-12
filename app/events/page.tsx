@@ -21,11 +21,18 @@ export default function EventsPage() {
             >
               {/* Image */}
               <div className="relative h-52 sm:h-56">
+                import Image from "next/image";
                 <Image
-                  src={event.image}
+                  src={
+                    event.image
+                      ? event.image
+                      : event.type === "upcoming"
+                        ? "/events/coming-soon.jpg"
+                        : "/events/default.jpg"
+                  }
                   alt={event.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition duration-300"
+                  className="object-cover"
                 />
               </div>
 
