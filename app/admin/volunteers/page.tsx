@@ -55,14 +55,24 @@ export default function VolunteerManager() {
   const sendWhatsApp = (v: any) => {
     const message = `Hello ${v.name},
 
-Thank you for volunteering with Indian Social Welfare Mission.
+Welcome to *Indian Social Welfare Mission Hingoli* 🤝
 
-Your volunteer request has been approved.
+Your volunteer registration has been *successfully approved*.
 
-Next Steps:
-Join our volunteer WhatsApp group and wait for event updates.
+We are excited to have you join our mission of serving the community through education, healthcare, and social initiatives.
 
-Contact: +91 9665802090`;
+📌 Next Steps:
+• Join our volunteer WhatsApp group
+• Wait for upcoming event updates
+• Participate in community activities
+
+If you have any questions, feel free to contact us.
+
+📞 Phone: +91 9665802090
+📧 Email: contact@indiansocialwelfare.com
+🌐 Website: https://indiansocialwelfare.com
+
+Thank you for being part of our mission to create positive change in society 🙏`;
 
     const url = `https://wa.me/91${v.phone}?text=${encodeURIComponent(message)}`;
 
@@ -164,12 +174,7 @@ Contact: +91 9665802090`;
                         WhatsApp
                       </button>
 
-                      <a
-                        href={`mailto:${v.email}`}
-                        className="text-blue-600 hover:underline"
-                      >
-                        Email
-                      </a>
+                      
                     </td>
                   </tr>
                 ))}

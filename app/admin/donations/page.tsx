@@ -144,7 +144,8 @@ doc.text(`Rs. ${formattedAmount}`, 100, y);
     }
 
     const baseUrl = window.location.origin;
-    const receiptLink = `${baseUrl}/receipt/${d.receiptno}`;
+
+const receiptLink = `${baseUrl}/receipt?no=${d.receiptno}`;
 
     const message = `Hello ${d.name},
 

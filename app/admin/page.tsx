@@ -14,7 +14,9 @@ export default function AdminDashboard() {
       <div className="bg-white min-h-screen">
         <div className="max-w-6xl mx-auto px-6 py-20">
           <div className="flex justify-between items-center mb-10">
-            <h1 className="text-4xl font-bold text-gray-700 ">Admin Dashboard</h1>
+            <h1 className="text-4xl font-bold text-gray-700 ">
+              Admin Dashboard
+            </h1>
 
             <button
               onClick={logout}
@@ -24,11 +26,11 @@ export default function AdminDashboard() {
             </button>
           </div>
 
-          <div className="grid md:grid-cols-3  text-gray-700 gap-8">            
+          <div className="grid md:grid-cols-3  text-gray-700 gap-8">
             <Link href="/admin/donations" className="border p-6 rounded shadow">
               Donation Dashboard
             </Link>
-            
+
             <Link
               href="/admin/volunteers"
               className="border p-6 rounded shadow"
@@ -39,7 +41,14 @@ export default function AdminDashboard() {
             <Link href="/admin/bank" className="border p-6 rounded shadow">
               Bank Settings
             </Link>
-            
+
+            <Link href="/admin/gallery" className="border p-6 rounded shadow">
+              Gallery Manager
+            </Link>
+
+            <Link href="/admin/events" className="border p-6 rounded shadow">
+              Event Management
+            </Link>
           </div>
         </div>
       </div>
